@@ -16,12 +16,22 @@ const HeroSection = () => (
       <Link href={'./'}>
         <button className="rounded-lg cursor-pointer bg-[#E1040F] px-4 py-2 mt-5 mb-20 text-base font-medium text-white">Join us now</button>
       </Link>
-      <div className="flex">
-        <img src="/model1.svg" className="w-[25%]" alt="Model" />   
-        <img src="/model2.svg" className="w-[25%]" alt="Model" />   
-        <img src="/model3.svg" className="w-[25%]" alt="Model" />   
-        <img src="/model4.svg" className="w-[25%]" alt="Model" />   
 
+
+
+      <div className="flex justify-between gap-4">
+        <div className="w-1/4 sm:w-1/3 md:w-1/4 lg:w-1/5 aspect-w-1 aspect-h-1">
+          <object data="/model1.svg" type="image/svg+xml" className="object-cover w-full h-full" aria-label="Model 1" />
+        </div>
+        <div className="w-1/4 sm:w-1/3 md:w-1/4 lg:w-1/5 aspect-w-1 aspect-h-1">
+          <object data="/model2.svg" type="image/svg+xml" className="object-cover w-full h-full" aria-label="Model 2" />
+        </div>
+        <div className="w-1/4 sm:w-1/3 md:w-1/4 lg:w-1/5 aspect-w-1 aspect-h-1">
+          <object data="/model3.svg" type="image/svg+xml" className="object-cover w-full h-full" aria-label="Model 3" />
+        </div>
+        <div className="w-1/4 sm:w-1/3 md:w-1/4 lg:w-1/5 aspect-w-1 aspect-h-1">
+          <object data="/model4.svg" type="image/svg+xml" className="object-cover w-full h-full" aria-label="Model 4" />
+        </div>
       </div>
     </div>
   </div>
@@ -151,7 +161,7 @@ const ContactForm = () => (
 );
 
 const Footer = () => (
-  <div className=" vsm:mt-56 nsm:mt-28">
+  <div className=" vsm:mt-64 nsm:mt-32">
     <div className="w-full bg-[#131313] text-white">
 
       <div className="w-11/12 mx-auto flex justify-between flex-col py-10">

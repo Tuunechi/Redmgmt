@@ -16,6 +16,13 @@ const HeroSection = () => (
       <Link href={'./'}>
         <button className="rounded-lg cursor-pointer bg-[#E1040F] px-4 py-2 mt-5 mb-20 text-base font-medium text-white">Join us now</button>
       </Link>
+      <div className="flex">
+        <img src="/model1.svg" className="w-[25%]" alt="Model" />   
+        <img src="/model2.svg" className="w-[25%]" alt="Model" />   
+        <img src="/model3.svg" className="w-[25%]" alt="Model" />   
+        <img src="/model4.svg" className="w-[25%]" alt="Model" />   
+
+      </div>
     </div>
   </div>
 );
@@ -188,7 +195,7 @@ const Footer = () => (
 
 export default function Home() {
   return (
-    <div>
+    <div className="bg-[#0A0909]">
       <HeroSection />
       <AboutSection />
       <SuccessStoriesSection />

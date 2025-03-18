@@ -79,7 +79,7 @@ const ContactForm = () => {
     try {
       console.log('Sending data:', values);
   
-      const response = await fetch('https://script.google.com/macros/s/AKfycbxXBNPMbPZGiaZpMHeKLrkYbUiyU-p6uBmwb0CwwZob9aXG8ob9WXtp5Q2CJDDuLtFZUw/exec', {
+      const response = await fetch('https://script.google.com/macros/s/AKfycbwaVfQg1Jt57QCfcaKoR6Oxk-Kr9IpwWYhyYhkZzLC-8n5qFlz3FxItGXTFWWjoVW03iQ/exec', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

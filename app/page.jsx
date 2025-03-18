@@ -75,41 +75,21 @@ const BlockchainSection = () => (
 );
 
 const ContactForm = () => {
-  const handleSubmit = async (values, { setSubmitting }) => {
+  const handleSubmit = async (formData) => {
     try {
-      console.log('Sending data:', values);
-  
-      const response = await fetch('https://script.google.com/macros/s/AKfycbwaVfQg1Jt57QCfcaKoR6Oxk-Kr9IpwWYhyYhkZzLC-8n5qFlz3FxItGXTFWWjoVW03iQ/exec', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(values),
+      const response = await fetch("/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formData),
       });
   
-      console.log('Response status:', response.status);
-  
-      if (!response.ok) {
-        const errorText = await response.text();
-        console.error('Server error:', errorText);
-        throw new Error(`Server error: ${errorText}`);
-      }
-  
-      const data = await response.json();
-      console.log('Response data:', data);
-  
-      if (data.success) {
-        alert('Form submitted successfully!');
-      } else {
-        alert('Error: ' + data.message);
-      }
-    } catch (err) {
-      console.error('Fetch error:', err);
-      alert('Error submitting form');
-    } finally {
-      setSubmitting(false);
+      const result = await response.json();
+      console.log(result);
+    } catch (error) {
+      console.error("Submission failed:", error);
     }
   };
+  
 
   return (
     <div className="bg-[#0A0909]" id="contact">
